@@ -1,116 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="HZewmzn5PbcnRlvrpYx8Ul04RI238zi8L6l95r89HBE" />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yappwire | Download Official App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body { 
-            background: radial-gradient(circle at top center, #1e1e38 0%, #0c0c14 100%);
-            color: #f3f4f6; 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
-            padding: 35px 25px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-        h1 {
-            font-size: 2.3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
-        }
-        p {
-            color: #9ca3af;
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 25px;
-        }
-        .btn { 
-            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
-            color: white; 
-            padding: 14px 28px; 
-            text-decoration: none; 
-            font-size: 1rem; 
-            border-radius: 14px; 
-            display: inline-block; 
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-            width: 100%;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
-        }
-        .app-mockup {
-            margin-top: 25px;
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px dashed rgba(255, 255, 255, 0.15);
-            border-radius: 16px;
-            height: 160px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6b7280;
-            font-size: 0.85rem;
-        }
-        footer {
-            margin-top: 20px;
-            font-size: 0.75rem;
-            color: #4b5563;
-            letter-spacing: 0.5px;
-            text-align: center;
-        }
-        footer span {
-            color: #9ca3af;
-        }
-    </style>
-</head>
-<body>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; max-width: 400px; margin: 0 auto;">
 
-    <div class="container">
-        <h1>Yappwire</h1>
-        <p>Welcome to the official home of Yappwire. Connect, chat, and explore seamlessly.</p>
-        
-        <a href="#" class="btn">Download Android APK</a>
-
-        <div class="app-mockup">
-            <span>App Screenshot Preview Coming Soon</span>
-        </div>
+  <div style="background: rgba(255, 255, 255, 0.05); border: 1px dashed rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 30px; width: 100%; text-align: center; box-sizing: border-box;">
+    <h3 style="color: #a5b4fc; margin: 0 0 15px 0; font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase;">Launching In</h3>
+    
+    <div id="countdown" style="color: #ffffff; font-size: 2rem; font-weight: bold; font-family: monospace; letter-spacing: 2px;">
+      00:00:00:00
     </div>
+  </div>
 
-    <footer>
-        Powered by <span>Gemini & Claude</span> &nbsp;|&nbsp; <span>Supabase</span> &nbsp;|&nbsp; <span>Google</span>
-    </footer>
+</div>
 
-</body>
-</html>
+<script>
+  // Set the launch date (Year, Month [0-11], Day, Hour, Minute)
+  // July is month index 6 (January is 0)
+  const launchDate = new Date(2026, 6, 5, 20, 0, 0).getTime();
+
+  const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / (1000));
+
+    // Format numbers to always have two digits
+    const d = days.toString().padStart(2, '0');
+    const h = hours.toString().padStart(2, '0');
+    const m = minutes.toString().padStart(2, '0');
+    const s = seconds.toString().padStart(2, '0');
+
+    // Display the result
+    if (distance < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "AVAILABLE NOW!";
+    } else {
+      document.getElementById("countdown").innerHTML = `${d}d : ${h}h : ${m}m : ${s}s`;
+    }
+  }, 1000);
+</script>
+

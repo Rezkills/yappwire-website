@@ -3,15 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yappwire | Download</title>
+    <title>Yappwire | Download Official App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
-        body { background-color: #12121F; color: white; font-family: sans-serif; text-align: center; padding: 50px; }
-        .btn { background-color: #4CAF50; color: white; padding: 15px 32px; text-decoration: none; font-size: 16px; border-radius: 8px; display: inline-block; margin-top: 20px; font-weight: bold; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body { 
+            background: radial-gradient(circle at top center, #1e1e38 0%, #0c0c14 100%);
+            color: #f3f4f6; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 40px 30px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        p {
+            color: #9ca3af;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .btn { 
+            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+            color: white; 
+            padding: 16px 32px; 
+            text-decoration: none; 
+            font-size: 1rem; 
+            border-radius: 14px; 
+            display: inline-block; 
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+            width: 100%;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+            background: linear-gradient(135deg, #5a52e6 0%, #4c8ff7 100%);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .app-mockup {
+            margin-top: 40px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #4b5563;
+            letter-spacing: 0.5px;
+        }
+        footer span {
+            color: #9ca3af;
+        }
     </style>
 </head>
 <body>
-    <h1>Yappwire</h1>
-    <p>Welcome to the official home of Yappwire.</p>
-    <a href="#" class="btn">Download Android APK</a>
+
+    <div class="container">
+        <h1>Yappwire</h1>
+        <p>Welcome to the official home of Yappwire. Connect, chat, and explore seamlessly.</p>
+        
+        <a href="#" class="btn">Download Android APK</a>
+
+        <div class="app-mockup">
+            <span>App Screenshot Preview Coming Soon</span>
+        </div>
+    </div>
+
+    <footer>
+        Powered by <span>Gemini & Claude</span> &nbsp;|&nbsp; <span>Supabase</span> &nbsp;|&nbsp; <span>Google</span>
+    </footer>
+
 </body>
 </html>

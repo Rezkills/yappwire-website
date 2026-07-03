@@ -1,146 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yappwire</title>
-  <style>
-    body {
-      background-color: #0c0c14;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 100vh;
-      align-items: center;
-      box-sizing: border-box;
-    }
-
-    .container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      width: 100%;
-      max-width: 440px;
-      box-sizing: border-box;
-    }
-
-    .card {
-      background: #131322;
-      border: 1px solid #1e1e38;
-      border-radius: 24px;
-      padding: 40px 24px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      box-sizing: border-box;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin: 0 0 15px 0;
-      color: #dbeafe;
-      letter-spacing: -0.5px;
-    }
-
-    p {
-      color: #94a3b8;
-      font-size: 1rem;
-      line-height: 1.6;
-      margin: 0 0 30px 0;
-    }
-
-    .countdown-box {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px dashed rgba(165, 180, 252, 0.2);
-      border-radius: 16px;
-      padding: 30px 20px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .countdown-label {
-      color: #a5b4fc;
-      margin: 0 0 15px 0;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    #countdown {
-      color: #ffffff;
-      font-size: 1.8rem;
-      font-weight: bold;
-      font-family: monospace;
-      letter-spacing: 1px;
-    }
-
-    footer {
-      padding: 30px 20px;
-      color: #475569;
-      font-size: 0.85rem;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    footer span {
-      color: #64748b;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yappwire | Download Official App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body { 
+            background: radial-gradient(circle at top center, #1e1e38 0%, #0c0c14 100%);
+            color: #f3f4f6; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 35px 25px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        p {
+            color: #9ca3af;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        /* New Countdown Card Style */
+        .countdown-container {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 25px 15px;
+            margin-top: 10px;
+        }
+        .countdown-title {
+            color: #a5b4fc;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        #countdown {
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: #4b5563;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        footer span {
+            color: #9ca3af;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="card">
-      <h1>Yappwire</h1>
-      <p>Welcome to the official home of Yappwire. Connect, chat, and explore seamlessly.</p>
-
-      <div class="countdown-box">
-        <div class="countdown-label">Launching In</div>
-        <div id="countdown">00d : 00h : 00m : 00s</div>
-      </div>
+    <div class="container">
+        <h1>Yappwire</h1>
+        <p>Welcome to the official home of Yappwire. Connect, chat, and explore seamlessly.</p>
+        
+        <div class="countdown-container">
+            <div class="countdown-title">Launching In</div>
+            <div id="countdown">00d : 00h : 00m : 00s</div>
+        </div>
     </div>
-  </div>
 
-  <footer>
-    Powered by <span>Gemini & Claude</span> | <span>Supabase</span> | <span>Google</span>
-  </footer>
+    <footer>
+        Powered by <span>Gemini & Claude</span> &nbsp;|&nbsp; <span>Supabase</span> &nbsp;|&nbsp; <span>Google</span>
+    </footer>
 
-  <script>
-    // Target Launch Date: Sunday, July 5, 2026 at 8:00 PM
-    const launchDate = new Date(2026, 6, 5, 20, 0, 0).getTime();
+    <script>
+        // Target Launch Date: Sunday, July 5, 2026 at 8:00 PM
+        const launchDate = new Date(2026, 6, 5, 20, 0, 0).getTime();
 
-    const timer = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / (1000));
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / (1000));
 
-      const d = days.toString().padStart(2, '0');
-      const h = hours.toString().padStart(2, '0');
-      const m = minutes.toString().padStart(2, '0');
-      const s = seconds.toString().padStart(2, '0');
+            const d = days.toString().padStart(2, '0');
+            const h = hours.toString().padStart(2, '0');
+            const m = minutes.toString().padStart(2, '0');
+            const s = seconds.toString().padStart(2, '0');
 
-      if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("countdown").innerHTML = "AVAILABLE NOW!";
-      } else {
-        document.getElementById("countdown").innerHTML = `${d}d : ${h}h : ${m}m : ${s}s`;
-      }
-    }, 1000);
-  </script>
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "AVAILABLE NOW!";
+            } else {
+                document.getElementById("countdown").innerHTML = `${d}d : ${h}h : ${m}m : ${s}s`;
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
+

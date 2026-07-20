@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yappwire | Download Official App</title>
+    <title>Yappwire | Official Ecosystem Status</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
@@ -51,15 +51,15 @@
             line-height: 1.5;
             margin-bottom: 25px;
         }
-        /* New Countdown Card Style */
-        .countdown-container {
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px dashed rgba(255, 255, 255, 0.15);
+        /* Updated Technical Review Card Style */
+        .status-container {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(165, 180, 252, 0.2);
             border-radius: 16px;
-            padding: 25px 15px;
+            padding: 25px 20px;
             margin-top: 10px;
         }
-        .countdown-title {
+        .status-title {
             color: #a5b4fc;
             font-size: 0.85rem;
             font-weight: 600;
@@ -67,11 +67,24 @@
             letter-spacing: 2px;
             margin-bottom: 12px;
         }
-        #countdown {
-            color: #ffffff;
-            font-size: 1.8rem;
+        .status-desc {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .status-badge {
+            display: inline-block;
+            margin-top: 18px;
+            color: #ff9500;
             font-weight: 800;
+            font-size: 0.8rem;
             letter-spacing: 1px;
+            text-transform: uppercase;
+            background: rgba(255, 149, 0, 0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 149, 0, 0.2);
         }
         footer {
             margin-top: 20px;
@@ -91,42 +104,18 @@
         <h1>Yappwire</h1>
         <p>Welcome to the official home of Yappwire. Connect, chat, and explore seamlessly.</p>
         
-        <div class="countdown-container">
-            <div class="countdown-title">Launching In</div>
-            <div id="countdown">00d : 00h : 00m : 00s</div>
+        <div class="status-container">
+            <div class="status-title">Ecosystem Status</div>
+            <p class="status-desc">
+                The public launch of Yappwire has been postponed to accommodate internal backend optimization and advanced security reviews. Rezkills Studio is currently utilizing this period to evaluate operational infrastructure and strategic scaling options.
+            </p>
+            <div class="status-badge">Status: Under Technical Review</div>
         </div>
     </div>
 
     <footer>
         Powered by <span>Gemini & Claude</span> &nbsp;|&nbsp; <span>Supabase</span> &nbsp;|&nbsp; <span>Google</span>
     </footer>
-
-    <script>
-        // Target Launch Date: Sunday, July 5, 2026 at 8:00 PM
-        const launchDate = new Date(2026, 6, 29, 23, 59, 0).getTime();
-
-        const timer = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / (1000));
-
-            const d = days.toString().padStart(2, '0');
-            const h = hours.toString().padStart(2, '0');
-            const m = minutes.toString().padStart(2, '0');
-            const s = seconds.toString().padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "AVAILABLE NOW!";
-            } else {
-                document.getElementById("countdown").innerHTML = `${d}d : ${h}h : ${m}m : ${s}s`;
-            }
-        }, 1000);
-    </script>
 
 </body>
 </html>
